@@ -6,8 +6,8 @@ attr_accessor(:word,:wordtocompare)
     @wordtocompare = wordtocompare
   end
 
-  def alphabetizer()
-    userword = @word
+  def alphabetizer(word)
+    userword = word
     splitword = userword.split('')
     alphabetizedsplitword = splitword.sort
     return alphabetizedsplitword

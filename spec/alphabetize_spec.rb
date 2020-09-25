@@ -7,6 +7,6 @@ describe ('alphabetizer') do
     word = 'zyxcba'
     wordtocompare = 'abcxyz'
     testobject = Alphabetize.new(word, wordtocompare)
-    expect(testobject.alphabetizer()).to eq(['a','b','c','x','y','z'])
+    expect(testobject.alphabetizer(word)).to eq(['a','b','c','x','y','z'])
   end
 end
