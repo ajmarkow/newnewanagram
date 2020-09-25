@@ -38,3 +38,9 @@ describe ('makewordsconsistent') do
       expect(test.antigramtest(word,otherword)).to(eq(false)) 
        end 
         end 
+describe ('splitasentence') do 
+sentence ="hello this is a sentence"
+ it('removes spaces between words') do 
+  expect(splitasentence(input)).to(eq(['hello','this','is','a','sentence'])) 
+   end 
+    end 
