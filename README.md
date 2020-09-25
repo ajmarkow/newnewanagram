@@ -2,7 +2,7 @@
 
 ---
 
-Ruby methods to test if a word is an anagram, an antigram., 9/25/2020
+Ruby methods to test if a word is an anagram, or an antigram,9/25/2020
 
 By **AJ Markow**
 
