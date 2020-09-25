@@ -2,10 +2,12 @@ require 'rspec'
 
 class Compare 
   def wordcompare(word,otherword)
+    puts "input #{word} and #{otherword}"
     if word == otherword
-      puts "Yes thats an anagram"
+      answer = true
     elsif 
-      puts "Not an anagram"
+      answer = false
     end
+    return answer
 end
 end
