@@ -24,17 +24,17 @@ describe ('Compare') do
 end
 describe ('makewordsconsistent') do 
   test= Compare.new('tea','tea')
-    word = "eat"
+    word = "CAR"
  it('downcases words') do 
-  expect(test.makewordsconsistent(word)).to((eq("eat")))
+  expect(test.makewordsconsistent(word)).to((eq("car")))
    end 
     end 
     
     describe ('antigramtest') do 
-      test= Compare.new('pancake','pancake')
+      test= Compare.new('pancake','go')
       word = test.word
       otherword =test.otherword
      it('checks if any characters match') do 
-      expect(test.antigramtest(word,otherword)).to(eq(true)) 
+      expect(test.antigramtest(word,otherword)).to(eq(false)) 
        end 
         end 
