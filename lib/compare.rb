@@ -1,6 +1,11 @@
 require 'rspec'
 
 class Compare 
+    attr_accessor(:word,:otherword)
+  def initialize (word,otherword)
+  @word = word
+  @otherword = otherword
+  end
 
   def makewordsconsistent(word)
   downcasedword = word.downcase
@@ -19,7 +24,7 @@ class Compare
 
     def is_a_word(input)
         answer =input.match (/[aeiou]/)
-        if answer = nil
+        if answer == nil
           return false
         else 
           return true
@@ -27,17 +32,19 @@ class Compare
     end
 
   def alphabetizer(word)
-    userword = word
-    splitword = userword.split('')
-    alphabetizedsplitword = splitword.sort
-    return alphabetizedsplitword
+    splitword = word.split('')
+    splitword.sort!()
+    return splitword
   end
 
   def antigramtest(word,otherword)
-    if word = otherword
-      return true
-    elsif word != otherword
-      return false
-    end
+    alphabethash = {'a'=>1,'b'=>2,'c'=>3,'d'=>4,'e'=>5,'f'=>6,'g'=>7,'h'=>8,'i'=>9,'j'=>10,'k'=>11,'l'=>12,'m'=>13,'n'=>14,'o'=>15,'p'=>16,'q'=>17,'r'=>18,'s'=>19,'t'=>20,'u'=>21,'v'=>22,'w'=>23,'x'=>24,'y'=>25,'z'=>26}
+   splitword = word.split('')
+   splitwordvalue = (splitword.map {|element| alphabethash.fetch(element)}).inject(0, &:+)
+   splitotherword = otherword.split('')
+   splitotherwordvalue = (splitotherword.map {|element| alphabethash.fetch(element)}).inject(0, &:+)
+   puts splitwordvalue
+   puts splitotherwordvalue
+   return splitwordvalue == splitotherwordvalue
   end
 end

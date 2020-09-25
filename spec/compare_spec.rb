@@ -2,31 +2,28 @@ require('compare')
 require 'rspec'
 
 describe ('Compare') do
-  test= Compare.new()
-  word = "tea"
-  otherword = "tea"
+  test= Compare.new('tea','tea')
   it('compares letters in a word') do
-    expect(test.wordcompare(word,otherword)).to(eq(true))
+    expect(test.wordcompare(test.word,test.otherword)).to(eq(true))
   end
 
   describe ('is_a_word') do 
-    test= Compare.new()
-  word = "mork"
+    test= Compare.new('tea','tea')
+    testword = 'mork'
    it('checks for vowels and returns true if there are any') do 
-    expect(test.is_a_word(word)).to(eq(true)) 
+    expect(test.is_a_word(testword)).to(eq(true)) 
      end 
       end
 
   describe ('alphabetizer') do 
-    test= Compare.new()
-    word = "tea"
+    test= Compare.new('tea','tea')
    it('alphabetizes word') do 
-    expect(test.alphabetizer(word)).to(eq(["a","e","t"])) 
+    expect(test.alphabetizer(test.word)).to(eq(["a","e","t"])) 
      end 
       end 
 end
 describe ('makewordsconsistent') do 
-  test= Compare.new()
+  test= Compare.new('tea','tea')
     word = "eat"
  it('downcases words') do 
   expect(test.makewordsconsistent(word)).to((eq("eat")))
@@ -34,9 +31,9 @@ describe ('makewordsconsistent') do
     end 
     
     describe ('antigramtest') do 
-      test= Compare.new()
-      word = "costumier"
-      otherword = "companies"
+      test= Compare.new('pancake','pancake')
+      word = test.word
+      otherword =test.otherword
      it('checks if any characters match') do 
       expect(test.antigramtest(word,otherword)).to(eq(true)) 
        end 
