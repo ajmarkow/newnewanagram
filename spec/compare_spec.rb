@@ -17,5 +17,13 @@ describe ('Compare') do
     expect(test.is_a_word(alphabetizedword)).to(eq(true)) 
      end 
       end
+
+  describe ('alphabetizer') do 
+    test= Compare.new()
+    word = "tea"
+   it('alphabetizes word') do 
+    expect(test.alphabetizer(word)).to(eq(["a","e","t"])) 
+     end 
+      end 
 end
 

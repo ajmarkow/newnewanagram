@@ -11,11 +11,12 @@ class Compare
     return answer
   end
   def is_a_word(word)
-    if word.include?(/'a'|'e'|'i'|'o'|'u'?/i)
+    if word.include?(/[aeiou]/)
       answer = true
     elsif
       answer = false
   end
+  return answer
 end
 def alphabetizer(word)
   userword = word
