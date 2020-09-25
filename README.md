@@ -9,10 +9,10 @@ By **AJ Markow**
 ## Description
 
 - Splits words into arrays where each element is a letter
-  -Splits sentences into arrays where each element is a word.
-  -Checks if words are anagrams
-  -Checks if words are actually words (if they contain vowels).
-  -Creates hash and checks the value of the hashed word against a comparison word to determine if they are antigrams.
+- Splits sentences into arrays where each element is a word.
+- Checks if words are anagrams
+- Checks if words are actually words (if they contain vowels).
+- giCreates hash and checks the value of the hashed word against a comparison word to determine if they are antigrams.
 
 ## Setup/Installation Requirements
 
