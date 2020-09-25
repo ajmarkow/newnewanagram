@@ -26,4 +26,11 @@ describe ('Compare') do
      end 
       end 
 end
-
+describe ('makewordsconsistent') do 
+  test= Compare.new()
+    word = "EAT"
+ it('downcases words') do 
+  expect(test.makewordsconsistent(word)).to((eq("eat")))
+   end 
+    end 
+    
