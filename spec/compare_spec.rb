@@ -12,9 +12,8 @@ describe ('Compare') do
   describe ('is_a_word') do 
     test= Compare.new()
   word = "tea"
-  alphabetizedword = test.alphabetizer(word)
    it('checks for vowels and returns true if there are any') do 
-    expect(test.is_a_word(alphabetizedword)).to(eq(true)) 
+    expect(test.is_a_word(word)).to(eq(true)) 
      end 
       end
 
@@ -28,7 +27,7 @@ describe ('Compare') do
 end
 describe ('makewordsconsistent') do 
   test= Compare.new()
-    word = "EAT"
+    word = "eat"
  it('downcases words') do 
   expect(test.makewordsconsistent(word)).to((eq("eat")))
    end 
