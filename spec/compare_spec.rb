@@ -1,7 +1,8 @@
 require('compare')
+require 'rspec'
 
 describe ('Compare') do
-  it('does this') do
-    expect(function-name(input)).to(eq())
+  it('compares letters in a word') do
+    expect(wordcompare(word,otherword)).to(eq(true))
   end
 end
