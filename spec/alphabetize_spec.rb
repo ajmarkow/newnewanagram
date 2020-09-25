@@ -1,7 +1,12 @@
 require('alphabetize')
+require('rspec')
 
-describe ('Alphabetize') do
-  it('does this') do
-    expect(alphabetizer([z,y,x,c,b,a])).to(eq([a,b,c,x,y,z]))
+
+describe ('alphabetizer') do
+  it('sorts letters based upon order in the alphabet') do
+    word = 'zyxcba'
+    wordtocompare = 'abcxyz'
+    testobject = Alphabetize.new(word, wordtocompare)
+    expect(testobject.alphabetizer()).to eq(['a','b','c','x','y','z'])
   end
 end
