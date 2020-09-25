@@ -9,5 +9,7 @@ class Compare
       answer = false
     end
     return answer
-end
+  end
+  def is_a_word(word,otherword)
+  end
 end
