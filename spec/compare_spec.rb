@@ -11,7 +11,7 @@ describe ('Compare') do
 
   describe ('is_a_word') do 
     test= Compare.new()
-  word = "tea"
+  word = "mork"
    it('checks for vowels and returns true if there are any') do 
     expect(test.is_a_word(word)).to(eq(true)) 
      end 
@@ -33,3 +33,11 @@ describe ('makewordsconsistent') do
    end 
     end 
     
+    describe ('antigramtest') do 
+      test= Compare.new()
+      word = "cat"
+      otherword = "dough"
+     it('checks if any characters match') do 
+      expect(test.antigramtest(word,otherword)).to(eq(true)) 
+       end 
+        end 

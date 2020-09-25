@@ -32,4 +32,8 @@ class Compare
     alphabetizedsplitword = splitword.sort
     return alphabetizedsplitword
   end
+
+  def printresults
+    puts
+  end
 end
