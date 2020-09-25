@@ -35,8 +35,8 @@ describe ('makewordsconsistent') do
     
     describe ('antigramtest') do 
       test= Compare.new()
-      word = "cat"
-      otherword = "dough"
+      word = "costumier"
+      otherword = "companies"
      it('checks if any characters match') do 
       expect(test.antigramtest(word,otherword)).to(eq(true)) 
        end 

@@ -33,7 +33,11 @@ class Compare
     return alphabetizedsplitword
   end
 
-  def printresults
-    puts
+  def antigramtest(word,otherword)
+    if word = otherword
+      return true
+    elsif word != otherword
+      return false
+    end
   end
 end
