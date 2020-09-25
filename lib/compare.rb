@@ -1,10 +1,11 @@
 require 'rspec'
 
 class Compare 
-    attr_accessor(:word,:otherword)
+    attr_accessor(:word,:otherword,:sentence)
   def initialize (word,otherword)
   @word = word
   @otherword = otherword
+  @sentence = sentence
   end
 
   def makewordsconsistent(word)
@@ -44,5 +45,10 @@ class Compare
    splitotherword = otherword.split('')
    splitotherwordvalue = (splitotherword.map {|element| alphabethash.fetch(element)}).inject(0, &:+)
    return splitwordvalue == splitotherwordvalue
+  end
+
+  def splitasentence(sentence)
+    splitsentence = sentence.split(' ')
+    return splitsentence
   end
 end

@@ -39,8 +39,9 @@ describe ('makewordsconsistent') do
        end 
         end 
 describe ('splitasentence') do 
-sentence ="hello this is a sentence"
+  test = Compare.new('cat','cat')
+test.sentence ="hello this is a sentence"
  it('removes spaces between words') do 
-  expect(splitasentence(input)).to(eq(['hello','this','is','a','sentence'])) 
+  expect(test.splitasentence(test.sentence)).to(eq(['hello','this','is','a','sentence'])) 
    end 
     end 
