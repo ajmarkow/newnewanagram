@@ -10,6 +10,8 @@ class Compare
   end
 
   def makewordsconsistent()
+    self.word = self.word.gsub(/\s+/, "")
+    self.otherword = self.otherword.gsub(/\s+/, "")
     self.word = self.word.downcase()
     self.otherword = self.otherword.downcase()
   end
