@@ -34,11 +34,15 @@ end
 
 describe ("antigramtest") do
   test = Compare.new("pancake", "go")
+  other = Compare.new("car", "cake")
   test.alphabetizer()
+  other.alphabetizer()
   it("checks if any characters match") do
     expect(test.antigram_test()).to(eq("They are antigrams and share no letters."))
+    expect(other.antigram_test()).to(eq("They share some letters in common.  They share [\"a\", \"c\"]"))
   end
 end
+
 describe ("splitasentence") do
   test = Compare.new("cat", "cat")
   test.sentence = "hello this is a sentence"

@@ -11,16 +11,11 @@ examplecompare.makewordsconsistent()
 testwordonecompare = examplecompare.is_a_word(examplecompare.word)
 testwordtwocompare = examplecompare.is_a_word(examplecompare.otherword)
 examplecompare.alphabetizer()
-if testwordonecompare == true && testwordtwocompare == true
+if testwordonecompare == true && testwordtwocompare == true && examplecompare.word == examplecompare.otherword
   puts "Both terms input were words"
-  wordcompareresult = examplecompare.wordcompare()
-  if wordcompareresult == true
-    puts "They are anagrams"
-  elsif wordcompareresult == false
-    result = examplecompare.antigram_test()
-    return result
-  end
-elsif testwordone == false or testwordtwo == false
-  puts "One or more terms input was not a word.  Please put in two words and try again."
-end
+  puts "They are also anagrams."
+elsif testwordonecompare == false && testwordtwocompare == false && examplecompare.word != examplecompare.otherword
+  puts "One or more terms input were not words."
+else testwordonecompare == true && testwordtwocompare == true && examplecompare.word == examplecompare.otherword
+  puts examplecompare.antigram_test end
 puts "See ya later!"
